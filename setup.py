@@ -16,6 +16,7 @@ def MoveCommandFiles():
     while i < len(command_files):
         command = ["mv",command_files[i],"/bin/"]
         subprocess.run(command)
+        subprocess.run(f"chmod +x /bin/{command_files[i]}",shell=True)
         i += 1
 
     print(f"{info} Finished moving files")
