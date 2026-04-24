@@ -1,0 +1,20 @@
+#!/bin/bash
+#create a file that starts and stops nginx
+case "$1" in
+        start)
+                sudo systemctl start nginx
+                ;;
+        stop)
+                sudo systemctl stop nginx
+                ;;
+        restart)
+                sudo systemctl restart nginx
+                ;;
+        status)
+                sudo systemctl status nginx
+                ;;
+        *)
+                echo "Usage: [start|stop|restart|status]"
+                echo "File location: $0"
+                ;;
+esac
