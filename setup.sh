@@ -2,7 +2,7 @@
 
 apt update -y
 clear
-echo "update done"
+echo "[\x1b[38;5;12mINFupdate done"
 apt upgrade -y 
 apt install python3 -y
 apt install hydra -y
